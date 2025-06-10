@@ -1,20 +1,19 @@
 function getComputerChoice(){
-    return Math.random();  
-}
+
 let computerChoice = (Math.random());
 console.log(computerChoice)
 
-let paper = "Paper"
-let scissors = "Scissors"
-let rock = "Rock"
-
 if (computerChoice >= 0 && computerChoice <= 0.33){
-    console.log(paper)
-} else if (computerChoice > 0.33 && computerChoice < 0.66){
-    console.log(rock)
+    return "Paper"
+} else if (computerChoice > 0.33 && computerChoice <= 0.66){
+    return "Rock"
 } else{
-    console.log(scissors)
+    return "Scissors"
 }
+}
+
+const computerSelection = getComputerChoice()
+console.log("Computer played: ", computerSelection)
 
 
 // Preciso criar uma funcao que vai escolher a escolha do computador
@@ -25,16 +24,43 @@ if (computerChoice >= 0 && computerChoice <= 0.33){
 // Se o número gerado for maior que 0.66 ou menor ou igual a 0.99 vai ser tesoura
 
 function getHumanChoice (){
+
    let humanChoice = prompt("Rock, Paper, Scissors?").toLowerCase();
+
    if (humanChoice === "rock"){
-    console.log("Rock")
-   }else if (humanChoice === "paper"){
-    console.log("Paper")
-    } else if (humanChoice === "scissors"){
-        console.log("Scissors")
-    } else{
-        console.log("Please enter a valid option")
+    return "Rock"
+   } else if (humanChoice === "paper"){
+    return "Paper"
+   } else if (humanChoice === "scissors"){
+    return "Scissors"
+   } else{
+    //  console.log("Please enter a valid option")
+    return getHumanChoice()
     }
    }
 
-   getHumanChoice()
+const humanSelection = getHumanChoice()
+console.log ("Player played: ", humanSelection)
+
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice){
+    humanChoice = humanChoice.toLowerCase()
+
+    if(humanChoice === computerChoice){
+        return "It's a draw! Try again!"
+    } else if (humanChoice === "rock" && computerChoice === "Scissors" ||
+    humanChoice === "paper" && computerChoice === "Rock" ||
+    humanChoice === "scissors" && computerChoice === "Paper"){
+        humanScore++
+        return `You win! ${humanChoice} beats ${computerChoice}!`
+    } else{
+        computerScore++
+        return `Computer win! ${computerChoice} beats ${humanChoice}!`
+    }
+}
+
+const roundResult = playRound(humanSelection, computerSelection)
+console.log("The result of this round is: ", roundResult)
+console.log(`Current score - Human: ${humanScore}, Computer: ${computerScore}`)
