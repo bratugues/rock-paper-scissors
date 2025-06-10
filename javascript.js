@@ -88,7 +88,7 @@ function playRound(humanChoice, computerChoice){
 }
 
 // Rodada 1
-console.log ("\n --- Rodada 1 ---")
+console.log ("\n --- Round 1 ---")
 
 const humanChoice1 = getHumanChoice();
 const computerChoice1 = getComputerChoice();
@@ -100,7 +100,7 @@ console.log("The result of this round is: ", result1)
 console.log(`Score after first round - Human: ${humanScore}, Computer: ${computerScore}`)
 
 // Rodada 2
-console.log ("\n --- Rodada 2 ---")
+console.log ("\n --- Round 2 ---")
 const humanChoice2 = getHumanChoice();
 const computerChoice2 = getComputerChoice();
 
@@ -111,7 +111,7 @@ console.log("The result of this round is: ", result2)
 console.log(`Score after second round - Human: ${humanScore}, Computer: ${computerScore}`)
 
 // Rodada 3
-console.log ("\n --- Rodada 3 ---")
+console.log ("\n --- Round 3 ---")
 const humanChoice3 = getHumanChoice();
 const computerChoice3 = getComputerChoice();
 
@@ -122,7 +122,7 @@ console.log("The result of this round is: ", result3)
 console.log(`Score after third round - Human: ${humanScore}, Computer: ${computerScore}`)
 
 // Rodada 4
-console.log ("\n --- Rodada 4 ---")
+console.log ("\n --- Round 4 ---")
 const humanChoice4 = getHumanChoice();
 const computerChoice4 = getComputerChoice();
 
@@ -133,7 +133,7 @@ console.log("The result of this round is: ", result4)
 console.log(`Score after fourth round - Human: ${humanScore}, Computer: ${computerScore}`)
 
 // Rodada 5
-console.log ("\n --- Rodada 5 ---")
+console.log ("\n --- Round 5 ---")
 const humanChoice5 = getHumanChoice();
 const computerChoice5 = getComputerChoice();
 
