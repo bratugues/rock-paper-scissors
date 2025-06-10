@@ -23,3 +23,18 @@ if (computerChoice >= 0 && computerChoice <= 0.33){
 // Se o número gerado for maior ou igual a 0 e menor ou igual a 0.33 vai ser papel
 // Se o número gerado for maior que 0.33 e menor que 0.66 vai ser pedra
 // Se o número gerado for maior que 0.66 ou menor ou igual a 0.99 vai ser tesoura
+
+function getHumanChoice (){
+   let humanChoice = prompt("Rock, Paper, Scissors?").toLowerCase();
+   if (humanChoice === "rock"){
+    console.log("Rock")
+   }else if (humanChoice === "paper"){
+    console.log("Paper")
+    } else if (humanChoice === "scissors"){
+        console.log("Scissors")
+    } else{
+        console.log("Please enter a valid option")
+    }
+   }
+
+   getHumanChoice()
